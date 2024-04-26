@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['auth']) || $_SESSION['auth'] !== true) {
+    header("Location: login.php");
+    exit;
+}
+?>
+
 <html>
 <head>
     <title>PÀGINA WEB DEL MENÚ PRINCIPAL DE L'APLICACIÓ D'ACCÉS A BASES DE DADES LDAP</title>
